@@ -7,5 +7,14 @@
  */
 
 module.exports = {
-
+    async upload(file) {
+        const cloudinary = require('cloudinary').v2;
+        cloudinary.config({
+            cloud_name: 'dotfhmjvl',
+            api_key: '739128235266877',
+            api_secret: 'lRxjxj78mz4T5ByWxYPuwYEf_Ig',
+            secure: true,
+            useComponent: true,
+        });
+    },
 };
