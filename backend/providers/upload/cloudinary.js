@@ -7,7 +7,7 @@ module.exports = {
 
         return {
             upload(file) {
-                cloudinary.image(`remote_strapi/${file}`, {
+                cloudinary.uploader.upload(`remote_strapi/${file}`, {
                     cloud_name: plugins.upload.providerOptions.cloud_name,
                     api_key: plugins.upload.providerOptions.api_key,
                     api_secret: plugins.upload.providerOptions.api_secret,

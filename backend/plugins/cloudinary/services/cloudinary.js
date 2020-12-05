@@ -9,12 +9,27 @@
 module.exports = {
     async upload(file) {
         const cloudinary = require('cloudinary').v2;
-        cloudinary.config({
+        const config = cloudinary.config({
             cloud_name: 'dotfhmjvl',
             api_key: '739128235266877',
             api_secret: 'lRxjxj78mz4T5ByWxYPuwYEf_Ig',
             secure: true,
             useComponent: true,
         });
+        await cloudinary.uploader.upload(file, config, function(err, results) {
+            console.log(results, err);
+        });
     },
+
+    async fetch(file) {
+        const cloudinary = require('cloudinary').v2;
+        const config = cloudinary.config({
+            cloud_name: 'dotfhmjvl',
+            api_key: '739128235266877',
+            api_secret: 'lRxjxj78mz4T5ByWxYPuwYEf_Ig',
+            secure: true,
+            useComponent: true,
+        });
+        await cloudinary.uploader.upload(`remote_strapi/${file}`, config);
+    }
 };

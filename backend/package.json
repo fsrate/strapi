@@ -12,6 +12,7 @@
     "devDependencies": {},
     "dependencies": {
         "cloudinary": "^1.23.0",
+        "cloudinary-cli": "^1.1.2",
         "knex": "<0.20.0",
         "sqlite3": "latest",
         "strapi": "3.3.4",

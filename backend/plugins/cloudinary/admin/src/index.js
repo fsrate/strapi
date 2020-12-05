@@ -38,7 +38,7 @@ export default strapi => {
                 permissions: [
                     // Uncomment to set the permissions of the plugin here
                     {
-                        action: 'plugins::plugin.name.actionType', // the action name should be plugins::plugin-name.actionType
+                        action: 'plugins::plugin-name.actionType', // the action name should be plugins::plugin-name.actionType
                         subject: null,
                     },
                 ],
