@@ -24,7 +24,7 @@ export default strapi => {
         lifecycles,
         mainComponent: App,
         name,
-        preventComponentRendering: false,
+        preventComponentRendering: true,
         trads,
         menu: {
             pluginsSectionLinks: [{

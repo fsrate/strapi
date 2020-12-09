@@ -22,6 +22,9 @@
     "linebreak-style": ["error", "unix"],
     "no-console": 0,
     "quotes": ["error", "single"],
-    "semi": ["error", "always"]
-  }
+    "semi": ["error", "always"],
+    "newline-per-chained-call": "off",
+    "array-element-newline": 2
+  },
+  "plugins": ["error", "cloudinary"]
 }

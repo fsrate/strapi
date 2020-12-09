@@ -1,7 +1,5 @@
 'use strict';
 
-import cloudinary from 'cloudinary';
-
 /**
  * cloudinary.js service
  *
@@ -10,6 +8,7 @@ import cloudinary from 'cloudinary';
 
 module.exports = {
     async upload(file) {
+        const cloudinary = require('cloudinary');
         const config = {
             cloud_name: 'dotfhmjvl',
             api_key: '739128235266877',
@@ -18,13 +17,9 @@ module.exports = {
             useComponent: true,
         };
 
-        await cloudinary.uploader.upload(file, config, function(err, results) {
+        await cloudinary.v2.uploader.upload(file, config, function(err, results) {
             console.log(results, err);
         });
     },
-
-    createMediaLibrary(options, callback, btnPlaceholder) {
-        return cloudinary.v2.createMediaLibrary(options, callback, btnPlaceholder);
-    }
 
 };
