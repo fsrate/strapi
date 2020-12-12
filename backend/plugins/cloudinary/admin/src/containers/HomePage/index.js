@@ -10,20 +10,16 @@ import pluginId from '../../pluginId';
 // import cloudinary from '../../../../controllers/cloudinary';
 
 const HomePage = () => {
-    return ( <
-        html >
-        <
-        head >
-        <
-        title > { pluginId }
-        s HomePage < /title> <
-        /head> <
-        body >
-        <
-        button id = "open-btn" > < /button> <
-        /body> <
-        /html>
-    )
+    return ( 
+      <html>
+        <head>
+          <title> {pluginId}s HomePage </title> 
+        </head> 
+        <body>
+          <button id="open-btn"></button> 
+        </body> 
+      </html>
+    );
 };
 
 export default memo(HomePage);
