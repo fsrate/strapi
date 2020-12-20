@@ -1,27 +1,27 @@
-import plugins from '../../config/plugins';
-
 module.exports = {
     init(providerOptions) {
-        const cloudinary = require('cloudinary');
+        const cloudinary = require('cloudinary').v2;
         cloudinary.v2.config(providerOptions);
 
         return {
             upload(file) {
-                cloudinary.v2.uploader.upload(`remote_strapi/${file}`, {
-                    cloud_name: plugins.upload.providerOptions.cloud_name,
-                    api_key: plugins.upload.providerOptions.api_key,
-                    api_secret: plugins.upload.providerOptions.api_secret,
+                cloudinary.uploader.upload(`remote_strapi/${file}`, {
+                    cloud_name: providerOptions.cloud_name || 'dotfhmjvl',
+                    api_key: providerOptions.api_key || '739128235266877',
+                    api_secret: providerOptions.api_secret || 'lRxjxj78mz4T5ByWxYPuwYEf_Ig',
                     secure: true,
                     public_id: 'strapi',
                     type: 'upload'
+                }, function(err, result) {
+                    console.log(result, err);
                 });
             },
             delete(file) {
 
             },
-            showUploadWidget() {
-                window.uw = cloudinary.v2.openUploadWidget({
-                    cloudName: plugins.upload.providerOptions.cloudName || 'dotfhmjvl',
+            uploadWidget() {
+                window.uw = cloudinary.openUploadWidget({
+                    cloudName: providerOptions.cloudName || 'dotfhmjvl',
                     uploadPreset: 'ml_default',
                     sources: [
                         'local',

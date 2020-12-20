@@ -7,6 +7,7 @@ module.exports = ({ env }) => ({
             api_secret: env('CLOUD_API_SECRET', 'lRxjxj78mz4T5ByWxYPuwYEf_Ig'),
             secure: true,
             useComponent: true,
+            upload_preset: true,
         },
     },
 });

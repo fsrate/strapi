@@ -3,7 +3,7 @@
     {
       "method": "GET",
       "path": "/",
-      "handler": "cloudinary.index",
+      "handler": "upload-cloudinary.index",
       "config": {
         "policies": []
       }

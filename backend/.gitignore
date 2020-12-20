@@ -117,3 +117,7 @@ package.lock.json
 env
 React
 react
+strapi-updater.json
+.strapi-updater.json
+yarn
+package.json
